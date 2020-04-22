@@ -236,7 +236,10 @@ export default function JitsiConference(options) {
     this._conferenceJoinAnalyticsEventSent = false;
 
     if (browser.supportsInsertableStreams()) {
-        this._e2eeCtx = new E2EEContext({ salt: this.options.name });
+        this._e2eeCtx = new E2EEContext({
+            myUserId: this.myUserId(),
+            salt: this.options.name
+        });
     }
 }
 

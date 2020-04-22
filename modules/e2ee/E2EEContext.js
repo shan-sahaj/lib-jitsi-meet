@@ -58,6 +58,8 @@ export default class E2EEcontext {
      *        https://developer.mozilla.org/en-US/docs/Web/API/Pbkdf2Params
      *      this is easily available and the same for all participants.
      *      We currently do not enforce a minimum length of 16 bytes either.
+     * @param {string} options.myUserId- local client id. This is the local MUC resourcepart.
+     *      Currently unused.
      */
     constructor(options) {
         this._options = options;
